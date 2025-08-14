@@ -1,0 +1,179 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme design system */
+@layer base {
+  :root {
+    --background: 218 23% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 23% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 23% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 0 255 136;
+    --primary-foreground: 220 23% 8%;
+
+    --secondary: 220 14% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 14% 15%;
+    --muted-foreground: 217 10% 64%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 23% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 14% 20%;
+    --input: 220 14% 20%;
+    --ring: 0 255 136;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/80;
+}
+
+/* Terminal styles */
+.terminal-window {
+  background: linear-gradient(145deg, #1a1b26, #16161e);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.project-card {
+  background: linear-gradient(145deg, #1e1e2e, #1a1b26);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(0, 255, 136, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.1);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Terminal colors */
+.text-terminal-green {
+  color: rgb(0, 255, 136);
+}
+
+.text-terminal-cyan {
+  color: hsl(180, 100%, 50%);
+}
+
+.text-terminal-amber {
+  color: hsl(45, 100%, 60%);
+}
+
+.text-terminal-pink {
+  color: hsl(320, 100%, 60%);
+}
+
+.bg-terminal-green {
+  background-color: rgb(0, 255, 136);
+}
+
+.bg-terminal-cyan {
+  background-color: hsl(180, 100%, 50%);
+}
+
+.bg-terminal-amber {
+  background-color: hsl(45, 100%, 60%);
+}
+
+.bg-terminal-pink {
+  background-color: hsl(320, 100%, 60%);
+}
+
+/* Border colors */
+.border-terminal-green {
+  border-color: rgb(0, 255, 136);
+}
+
+.border-terminal-cyan {
+  border-color: hsl(180, 100%, 50%);
+}
+
+.border-terminal-amber {
+  border-color: hsl(45, 100%, 60%);
+}
+
+.border-terminal-pink {
+  border-color: hsl(320, 100%, 60%);
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.animate-fall {
+  animation: fall linear infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
