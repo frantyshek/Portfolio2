@@ -1,11 +1,124 @@
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Github, Linkedin, MapPin, Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { Mail, Github, Linkedin, MapPin, Send, Loader2 } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const validateForm = () => {
+    if (!formData.name.trim()) {
+      toast({
+        title: "Error",
+        description: "Name is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    if (!formData.email.trim()) {
+      toast({
+        title: "Error", 
+        description: "Email is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    if (!formData.subject.trim()) {
+      toast({
+        title: "Error",
+        description: "Subject is required", 
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    if (!formData.message.trim()) {
+      toast({
+        title: "Error",
+        description: "Message is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([{
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: formData.subject.trim(),
+          message: formData.message.trim()
+        }]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
@@ -133,48 +246,81 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-mono font-medium mb-2">Name</label>
+                    <Input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your name"
+                      required
+                      disabled={isSubmitting}
+                      className="bg-muted/50 border-primary/30 focus:border-primary font-mono"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-mono font-medium mb-2">Email</label>
+                    <Input
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="your.email@example.com"
+                      required
+                      disabled={isSubmitting}
+                      className="bg-muted/50 border-primary/30 focus:border-primary font-mono"
+                    />
+                  </div>
+                </div>
+                
                 <div>
-                  <label className="block text-sm font-mono font-medium mb-2">Name</label>
+                  <label className="block text-sm font-mono font-medium mb-2">Subject</label>
                   <Input
-                    placeholder="Your name"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    placeholder="Project collaboration"
+                    required
+                    disabled={isSubmitting}
                     className="bg-muted/50 border-primary/30 focus:border-primary font-mono"
                   />
                 </div>
+                
                 <div>
-                  <label className="block text-sm font-mono font-medium mb-2">Email</label>
-                  <Input
-                    type="email"
-                    placeholder="your.email@example.com"
-                    className="bg-muted/50 border-primary/30 focus:border-primary font-mono"
+                  <label className="block text-sm font-mono font-medium mb-2">Message</label>
+                  <Textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell me about your project or idea..."
+                    rows={6}
+                    required
+                    disabled={isSubmitting}
+                    className="bg-muted/50 border-primary/30 focus:border-primary font-mono resize-none"
                   />
                 </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-mono font-medium mb-2">Subject</label>
-                <Input
-                  placeholder="Project collaboration"
-                  className="bg-muted/50 border-primary/30 focus:border-primary font-mono"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-mono font-medium mb-2">Message</label>
-                <Textarea
-                  placeholder="Tell me about your project or idea..."
-                  rows={6}
-                  className="bg-muted/50 border-primary/30 focus:border-primary font-mono resize-none"
-                />
-              </div>
-              
-              <Button
-                size="lg"
-                className="w-full bg-terminal-green hover:bg-terminal-green/80 text-black font-mono font-bold"
-              >
-                <Send className="mr-2 h-5 w-5" />
-                Send Message
-              </Button>
+                
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-terminal-green hover:bg-terminal-green/80 text-black font-mono font-bold"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>
