@@ -51,26 +51,26 @@ Perfect for streamers, speedrunners, and anyone who enjoys digital masochism.`,
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/8b82c4f4-11bd-4ca2-b703-96a94d4b5cd4.png',
-          thumbnail: '/lovable-uploads/8b82c4f4-11bd-4ca2-b703-96a94d4b5cd4.png'
+          original: getAssetPath('/lovable-uploads/8b82c4f4-11bd-4ca2-b703-96a94d4b5cd4.png'),
+          thumbnail: getAssetPath('/lovable-uploads/8b82c4f4-11bd-4ca2-b703-96a94d4b5cd4.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/2abf7171-dcfb-4e77-bbcb-98459d6c7e28.png',
-          thumbnail: '/lovable-uploads/2abf7171-dcfb-4e77-bbcb-98459d6c7e28.png'
+          original: getAssetPath('/lovable-uploads/2abf7171-dcfb-4e77-bbcb-98459d6c7e28.png'),
+          thumbnail: getAssetPath('/lovable-uploads/2abf7171-dcfb-4e77-bbcb-98459d6c7e28.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/c08df632-8b8d-47f5-b35d-cec632d6e2b0.png',
-          thumbnail: '/lovable-uploads/c08df632-8b8d-47f5-b35d-cec632d6e2b0.png'
+          original: getAssetPath('/lovable-uploads/c08df632-8b8d-47f5-b35d-cec632d6e2b0.png'),
+          thumbnail: getAssetPath('/lovable-uploads/c08df632-8b8d-47f5-b35d-cec632d6e2b0.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/fd9fb133-d598-42fe-8acc-6a885ec11dc4.png',
-          thumbnail: '/lovable-uploads/fd9fb133-d598-42fe-8acc-6a885ec11dc4.png'
+          original: getAssetPath('/lovable-uploads/fd9fb133-d598-42fe-8acc-6a885ec11dc4.png'),
+          thumbnail: getAssetPath('/lovable-uploads/fd9fb133-d598-42fe-8acc-6a885ec11dc4.png')
         }
       ],
-      image: '/lovable-uploads/6fd0f450-b504-4620-97f8-dc60ce896346.png',
+      image: getAssetPath('/lovable-uploads/6fd0f450-b504-4620-97f8-dc60ce896346.png'),
       tags: ['Unity', 'C#', 'Puzzle', 'Troll Game', 'Steam'],
       category: 'personal',
       duration: 'In Development',
@@ -110,21 +110,21 @@ Romoji promises to immerse players in a heartfelt story, where the paths you cho
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/4ebc6a44-3eb3-47ad-8e97-3471834418dc.png',
-          thumbnail: '/lovable-uploads/4ebc6a44-3eb3-47ad-8e97-3471834418dc.png'
+          original: getAssetPath('/lovable-uploads/4ebc6a44-3eb3-47ad-8e97-3471834418dc.png'),
+          thumbnail: getAssetPath('/lovable-uploads/4ebc6a44-3eb3-47ad-8e97-3471834418dc.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/abcf10d8-7585-42df-8495-b1cff39ccadb.png',
-          thumbnail: '/lovable-uploads/abcf10d8-7585-42df-8495-b1cff39ccadb.png'
+          original: getAssetPath('/lovable-uploads/abcf10d8-7585-42df-8495-b1cff39ccadb.png'),
+          thumbnail: getAssetPath('/lovable-uploads/abcf10d8-7585-42df-8495-b1cff39ccadb.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/df482301-9947-4315-9544-d66831a3af8a.png',
-          thumbnail: '/lovable-uploads/df482301-9947-4315-9544-d66831a3af8a.png'
+          original: getAssetPath('/lovable-uploads/df482301-9947-4315-9544-d66831a3af8a.png'),
+          thumbnail: getAssetPath('/lovable-uploads/df482301-9947-4315-9544-d66831a3af8a.png')
         }
       ],
-      image: '/lovable-uploads/e4082b8c-e738-4381-8903-636678320f98.png',
+      image: getAssetPath('/lovable-uploads/e4082b8c-e738-4381-8903-636678320f98.png'),
       tags: ['Unity', 'C#', 'Mobile', 'Visual Novel'],
       category: 'work',
       duration: '10 months',
@@ -154,23 +154,23 @@ Features:
 • Exciting party features to challenge your friends`,
       images: [
         {
-          original: '/lovable-uploads/73a2604f-1d0d-40a2-9b0e-e5ef7c260380.png',
-          thumbnail: '/lovable-uploads/73a2604f-1d0d-40a2-9b0e-e5ef7c260380.png'
+          original: getAssetPath('/lovable-uploads/73a2604f-1d0d-40a2-9b0e-e5ef7c260380.png'),
+          thumbnail: getAssetPath('/lovable-uploads/73a2604f-1d0d-40a2-9b0e-e5ef7c260380.png')
         },
         {
-          original: '/lovable-uploads/91703d6d-ddcb-42d5-8713-115fdd808d84.png',
-          thumbnail: '/lovable-uploads/91703d6d-ddcb-42d5-8713-115fdd808d84.png'
+          original: getAssetPath('/lovable-uploads/91703d6d-ddcb-42d5-8713-115fdd808d84.png'),
+          thumbnail: getAssetPath('/lovable-uploads/91703d6d-ddcb-42d5-8713-115fdd808d84.png')
         },
         {
-          original: '/lovable-uploads/161c3756-b0c6-4e65-a933-92d30d81f601.png',
-          thumbnail: '/lovable-uploads/161c3756-b0c6-4e65-a933-92d30d81f601.png'
+          original: getAssetPath('/lovable-uploads/161c3756-b0c6-4e65-a933-92d30d81f601.png'),
+          thumbnail: getAssetPath('/lovable-uploads/161c3756-b0c6-4e65-a933-92d30d81f601.png')
         },
         {
-          original: '/lovable-uploads/71691e9e-9ed5-4978-abe9-8d2a5beaea0e.png',
-          thumbnail: '/lovable-uploads/71691e9e-9ed5-4978-abe9-8d2a5beaea0e.png'
+          original: getAssetPath('/lovable-uploads/71691e9e-9ed5-4978-abe9-8d2a5beaea0e.png'),
+          thumbnail: getAssetPath('/lovable-uploads/71691e9e-9ed5-4978-abe9-8d2a5beaea0e.png')
         }
       ],
-      image: '/lovable-uploads/8c6f5458-70ff-4dfb-bb92-7ab7b9d523df.png',
+      image: getAssetPath('/lovable-uploads/8c6f5458-70ff-4dfb-bb92-7ab7b9d523df.png'),
       tags: ['Unity', 'C#', 'Educational', 'Multiplayer', 'Mobile'],
       category: 'work',
       duration: '8 months',
@@ -203,21 +203,21 @@ The game includes:
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/33c7097c-7864-4bda-8fb6-33ad1a116a40.png',
-          thumbnail: '/lovable-uploads/33c7097c-7864-4bda-8fb6-33ad1a116a40.png'
+          original: getAssetPath('/lovable-uploads/33c7097c-7864-4bda-8fb6-33ad1a116a40.png'),
+          thumbnail: getAssetPath('/lovable-uploads/33c7097c-7864-4bda-8fb6-33ad1a116a40.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/4c7fc6db-57f6-44a9-8c41-90471bbc0d67.png',
-          thumbnail: '/lovable-uploads/4c7fc6db-57f6-44a9-8c41-90471bbc0d67.png'
+          original: getAssetPath('/lovable-uploads/4c7fc6db-57f6-44a9-8c41-90471bbc0d67.png'),
+          thumbnail: getAssetPath('/lovable-uploads/4c7fc6db-57f6-44a9-8c41-90471bbc0d67.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/48e5af40-599f-4aae-8f40-b7089c1267c7.png',
-          thumbnail: '/lovable-uploads/48e5af40-599f-4aae-8f40-b7089c1267c7.png'
+          original: getAssetPath('/lovable-uploads/48e5af40-599f-4aae-8f40-b7089c1267c7.png'),
+          thumbnail: getAssetPath('/lovable-uploads/48e5af40-599f-4aae-8f40-b7089c1267c7.png')
         }
       ],
-      image: '/lovable-uploads/33c7097c-7864-4bda-8fb6-33ad1a116a40.png',
+      image: getAssetPath('/lovable-uploads/33c7097c-7864-4bda-8fb6-33ad1a116a40.png'),
       tags: ['Unity', 'C#', 'VR', 'Therapy'],
       category: 'work',
       duration: '9 months',
@@ -243,11 +243,11 @@ The game focuses on:
 • Solving mysteries with your partner`,
       images: [
         {
-          original: '/lovable-uploads/e3e683ba-e18d-4164-b960-0e1329133b5a.png',
-          thumbnail: '/lovable-uploads/e3e683ba-e18d-4164-b960-0e1329133b5a.png'
+          original: getAssetPath('/lovable-uploads/e3e683ba-e18d-4164-b960-0e1329133b5a.png'),
+          thumbnail: getAssetPath('/lovable-uploads/e3e683ba-e18d-4164-b960-0e1329133b5a.png')
         }
       ],
-      image: '/lovable-uploads/58ae3266-248d-4aac-8612-26532b524205.png',
+      image: getAssetPath('/lovable-uploads/58ae3266-248d-4aac-8612-26532b524205.png'),
       tags: ['Unity', 'C#', 'VR', 'Co-op'],
       category: 'work',
       duration: '3 months',
@@ -271,11 +271,11 @@ The game includes:
 • Fast-paced combat and enemy waves`,
       images: [
         {
-          original: '/lovable-uploads/98c8859e-581b-497d-970c-e65f4a80b42c.png',
-          thumbnail: '/lovable-uploads/98c8859e-581b-497d-970c-e65f4a80b42c.png'
+          original: getAssetPath('/lovable-uploads/98c8859e-581b-497d-970c-e65f4a80b42c.png'),
+          thumbnail: getAssetPath('/lovable-uploads/98c8859e-581b-497d-970c-e65f4a80b42c.png')
         }
       ],
-      image: '/lovable-uploads/10769334-d6e6-4268-a18c-4708ae6bf3d0.png',
+      image: getAssetPath('/lovable-uploads/10769334-d6e6-4268-a18c-4708ae6bf3d0.png'),
       tags: ['Unity', 'C#', '2D', 'Action'],
       category: 'work',
       duration: '6 months',
@@ -299,15 +299,15 @@ The game includes:
 • Interactive gameplay mechanics`,
       images: [
         {
-          original: '/lovable-uploads/2a2ae419-bd07-470a-976a-6691e0d76edf.png',
-          thumbnail: '/lovable-uploads/2a2ae419-bd07-470a-976a-6691e0d76edf.png'
+          original: getAssetPath('/lovable-uploads/2a2ae419-bd07-470a-976a-6691e0d76edf.png'),
+          thumbnail: getAssetPath('/lovable-uploads/2a2ae419-bd07-470a-976a-6691e0d76edf.png')
         },
         {
-          original: '/lovable-uploads/0b84aa88-3923-4b45-be85-5fbe0966dc8e.png',
-          thumbnail: '/lovable-uploads/0b84aa88-3923-4b45-be85-5fbe0966dc8e.png'
+          original: getAssetPath('/lovable-uploads/0b84aa88-3923-4b45-be85-5fbe0966dc8e.png'),
+          thumbnail: getAssetPath('/lovable-uploads/0b84aa88-3923-4b45-be85-5fbe0966dc8e.png')
         }
       ],
-      image: '/lovable-uploads/a88d4d53-804e-4a47-a024-9564ec8f7347.png',
+      image: getAssetPath('/lovable-uploads/a88d4d53-804e-4a47-a024-9564ec8f7347.png'),
       tags: ['Unity', 'C#', 'Puzzle', 'Escape Room'],
       category: 'course',
       duration: '5 weeks',
@@ -340,26 +340,26 @@ Features:
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/84396bb1-08ac-44d0-a962-bd3a30e1101b.png',
-          thumbnail: '/lovable-uploads/84396bb1-08ac-44d0-a962-bd3a30e1101b.png'
+          original: getAssetPath('/lovable-uploads/84396bb1-08ac-44d0-a962-bd3a30e1101b.png'),
+          thumbnail: getAssetPath('/lovable-uploads/84396bb1-08ac-44d0-a962-bd3a30e1101b.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/9296f44b-a6cc-4e92-86d1-fb973d826fa9.png',
-          thumbnail: '/lovable-uploads/9296f44b-a6cc-4e92-86d1-fb973d826fa9.png'
+          original: getAssetPath('/lovable-uploads/9296f44b-a6cc-4e92-86d1-fb973d826fa9.png'),
+          thumbnail: getAssetPath('/lovable-uploads/9296f44b-a6cc-4e92-86d1-fb973d826fa9.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/f0c64aca-d162-47f6-b793-98b4a1469ef7.png',
-          thumbnail: '/lovable-uploads/f0c64aca-d162-47f6-b793-98b4a1469ef7.png'
+          original: getAssetPath('/lovable-uploads/f0c64aca-d162-47f6-b793-98b4a1469ef7.png'),
+          thumbnail: getAssetPath('/lovable-uploads/f0c64aca-d162-47f6-b793-98b4a1469ef7.png')
         },
         {
           type: 'image' as const,
-          original: '/lovable-uploads/fcc5e025-977a-42ef-b2ec-6ea4461e415c.png',
-          thumbnail: '/lovable-uploads/fcc5e025-977a-42ef-b2ec-6ea4461e415c.png'
+          original: getAssetPath('/lovable-uploads/fcc5e025-977a-42ef-b2ec-6ea4461e415c.png'),
+          thumbnail: getAssetPath('/lovable-uploads/fcc5e025-977a-42ef-b2ec-6ea4461e415c.png')
         }
       ],
-      image: '/lovable-uploads/809b1d36-7836-4b5c-9c17-13fd146f4720.png',
+      image: getAssetPath('/lovable-uploads/809b1d36-7836-4b5c-9c17-13fd146f4720.png'),
       tags: ['Unity', 'C#', 'Horror', 'Thesis'],
       category: 'personal',
       duration: '4 months',
@@ -386,15 +386,15 @@ Features:
 • Epic boss fights and dungeon challenges`,
       images: [
         {
-          original: '/lovable-uploads/326083f3-fcf1-4441-8a63-59ccd29a0e74.png',
-          thumbnail: '/lovable-uploads/326083f3-fcf1-4441-8a63-59ccd29a0e74.png'
+          original: getAssetPath('/lovable-uploads/326083f3-fcf1-4441-8a63-59ccd29a0e74.png'),
+          thumbnail: getAssetPath('/lovable-uploads/326083f3-fcf1-4441-8a63-59ccd29a0e74.png')
         },
         {
-          original: '/lovable-uploads/0e258334-a4c1-4826-b83e-3fb3646bf6b2.png',
-          thumbnail: '/lovable-uploads/0e258334-a4c1-4826-b83e-3fb3646bf6b2.png'
+          original: getAssetPath('/lovable-uploads/0e258334-a4c1-4826-b83e-3fb3646bf6b2.png'),
+          thumbnail: getAssetPath('/lovable-uploads/0e258334-a4c1-4826-b83e-3fb3646bf6b2.png')
         }
       ],
-      image: '/lovable-uploads/9f60af0f-9b47-4d72-9257-a334498e1aa7.png',
+      image: getAssetPath('/lovable-uploads/9f60af0f-9b47-4d72-9257-a334498e1aa7.png'),
       tags: ['Unity', 'C#', 'RPG', 'Fantasy'],
       category: 'personal',
       duration: '3 months',
@@ -427,23 +427,23 @@ Future Updates:
 Note: This game is designed to be a mobile game, but because it was made for a game jam, the export had to be on PC.`,
       images: [
         {
-          original: '/lovable-uploads/2941fa5a-1003-4073-a90c-93866f42c4fc.png',
-          thumbnail: '/lovable-uploads/2941fa5a-1003-4073-a90c-93866f42c4fc.png'
+          original: getAssetPath('/lovable-uploads/2941fa5a-1003-4073-a90c-93866f42c4fc.png'),
+          thumbnail: getAssetPath('/lovable-uploads/2941fa5a-1003-4073-a90c-93866f42c4fc.png')
         },
         {
-          original: '/lovable-uploads/b3e3c08d-77fb-4b4d-abee-ed7d1c6b4ac0.png',
-          thumbnail: '/lovable-uploads/b3e3c08d-77fb-4b4d-abee-ed7d1c6b4ac0.png'
+          original: getAssetPath('/lovable-uploads/b3e3c08d-77fb-4b4d-abee-ed7d1c6b4ac0.png'),
+          thumbnail: getAssetPath('/lovable-uploads/b3e3c08d-77fb-4b4d-abee-ed7d1c6b4ac0.png')
         },
         {
-          original: '/lovable-uploads/87296659-2e65-42a9-afa2-5016a64965c8.png',
-          thumbnail: '/lovable-uploads/87296659-2e65-42a9-afa2-5016a64965c8.png'
+          original: getAssetPath('/lovable-uploads/87296659-2e65-42a9-afa2-5016a64965c8.png'),
+          thumbnail: getAssetPath('/lovable-uploads/87296659-2e65-42a9-afa2-5016a64965c8.png')
         },
         {
-          original: '/lovable-uploads/1c96aa36-dcbb-4e29-91eb-2e2d52fa5dd6.png',
-          thumbnail: '/lovable-uploads/1c96aa36-dcbb-4e29-91eb-2e2d52fa5dd6.png'
+          original: getAssetPath('/lovable-uploads/1c96aa36-dcbb-4e29-91eb-2e2d52fa5dd6.png'),
+          thumbnail: getAssetPath('/lovable-uploads/1c96aa36-dcbb-4e29-91eb-2e2d52fa5dd6.png')
         }
       ],
-      image: '/lovable-uploads/8b7c37fe-d962-4f68-9128-19e5d344fb07.png',
+      image: getAssetPath('/lovable-uploads/8b7c37fe-d962-4f68-9128-19e5d344fb07.png'),
       tags: ['Unity', 'C#', 'Casual', 'Mobile'],
       category: 'personal',
       duration: '6 months',
@@ -471,15 +471,15 @@ Features:
 Note: This game is also designed for mobile platforms.`,
       images: [
         {
-          original: '/lovable-uploads/557775f0-05f8-446b-9aad-01bdd3cbb745.png',
-          thumbnail: '/lovable-uploads/557775f0-05f8-446b-9aad-01bdd3cbb745.png'
+          original: getAssetPath('/lovable-uploads/557775f0-05f8-446b-9aad-01bdd3cbb745.png'),
+          thumbnail: getAssetPath('/lovable-uploads/557775f0-05f8-446b-9aad-01bdd3cbb745.png')
         },
         {
-          original: '/lovable-uploads/e3b391a7-fbbc-4836-b11e-7cff4b9355ae.png',
-          thumbnail: '/lovable-uploads/e3b391a7-fbbc-4836-b11e-7cff4b9355ae.png'
+          original: getAssetPath('/lovable-uploads/e3b391a7-fbbc-4836-b11e-7cff4b9355ae.png'),
+          thumbnail: getAssetPath('/lovable-uploads/e3b391a7-fbbc-4836-b11e-7cff4b9355ae.png')
         }
       ],
-      image: '/lovable-uploads/0494cb73-cd34-4d5c-8911-3321dbbc324b.png',
+      image: getAssetPath('/lovable-uploads/0494cb73-cd34-4d5c-8911-3321dbbc324b.png'),
       tags: ['Unity', 'C#', 'Puzzle', 'Mobile'],
       category: 'personal',
       duration: '3 months',
@@ -505,11 +505,11 @@ Features:
 • Progressive difficulty levels that increase the thrill`,
       images: [
         {
-          original: '/lovable-uploads/0156f133-a438-47c8-92d2-b2602bb5eb01.png',
-          thumbnail: '/lovable-uploads/0156f133-a438-47c8-92d2-b2602bb5eb01.png'
+          original: getAssetPath('/lovable-uploads/0156f133-a438-47c8-92d2-b2602bb5eb01.png'),
+          thumbnail: getAssetPath('/lovable-uploads/0156f133-a438-47c8-92d2-b2602bb5eb01.png')
         }
       ],
-      image: '/lovable-uploads/9a0fe7b5-7675-4712-8887-f824f6a33ede.png',
+      image: getAssetPath('/lovable-uploads/9a0fe7b5-7675-4712-8887-f824f6a33ede.png'),
       tags: ['Unity', 'C#', 'Arcade', 'Space'],
       category: 'personal',
       duration: '1 month',
@@ -534,19 +534,19 @@ Features:
 • Progressive difficulty that increases with each level`,
       images: [
         {
-          original: '/lovable-uploads/98d1eaf8-1672-4710-a15c-b597c084e311.png',
-          thumbnail: '/lovable-uploads/98d1eaf8-1672-4710-a15c-b597c084e311.png'
+          original: getAssetPath('/lovable-uploads/98d1eaf8-1672-4710-a15c-b597c084e311.png'),
+          thumbnail: getAssetPath('/lovable-uploads/98d1eaf8-1672-4710-a15c-b597c084e311.png')
         },
         {
-          original: '/lovable-uploads/c1b36dd5-0a0c-4f61-a84a-ab62132639bd.png',
-          thumbnail: '/lovable-uploads/c1b36dd5-0a0c-4f61-a84a-ab62132639bd.png'
+          original: getAssetPath('/lovable-uploads/c1b36dd5-0a0c-4f61-a84a-ab62132639bd.png'),
+          thumbnail: getAssetPath('/lovable-uploads/c1b36dd5-0a0c-4f61-a84a-ab62132639bd.png')
         },
         {
-          original: '/lovable-uploads/12a62af9-7f13-43ca-9c70-c9c7d311bc09.png',
-          thumbnail: '/lovable-uploads/12a62af9-7f13-43ca-9c70-c9c7d311bc09.png'
+          original: getAssetPath('/lovable-uploads/12a62af9-7f13-43ca-9c70-c9c7d311bc09.png'),
+          thumbnail: getAssetPath('/lovable-uploads/12a62af9-7f13-43ca-9c70-c9c7d311bc09.png')
         }
       ],
-      image: '/lovable-uploads/98d1eaf8-1672-4710-a15c-b597c084e311.png',
+      image: getAssetPath('/lovable-uploads/98d1eaf8-1672-4710-a15c-b597c084e311.png'),
       tags: ['Unity', 'C#', 'Puzzle', 'Platformer'],
       category: 'personal',
       duration: '2 weeks',
