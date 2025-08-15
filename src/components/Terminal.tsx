@@ -199,7 +199,7 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
           </div>
 
           {/* Terminal Content */}
-          <div className="h-full flex flex-col bg-background/95">
+          <div className="flex flex-col bg-background/95" style={{ height: 'calc(100% - 3rem)' }}>
             {/* Scrollable Content Area */}
             <div ref={terminalRef} className="flex-1 p-4 overflow-y-auto font-mono text-sm">
               {/* Welcome Message */}
