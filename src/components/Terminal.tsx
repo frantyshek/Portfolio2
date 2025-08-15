@@ -153,19 +153,55 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
           {/* Terminal Header */}
           <div className="bg-muted/50 px-4 py-2 flex items-center justify-between border-b border-primary/20">
             <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-terminal-green"></div>
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer"
+                title="Close terminal"
+              />
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors cursor-pointer"
+                title="Minimize terminal"
+              />
+              <button 
+                onClick={() => {
+                  setHistory([]);
+                  setInput('');
+                }}
+                className="w-3 h-3 rounded-full bg-terminal-green hover:bg-green-600 transition-colors cursor-pointer"
+                title="Clear terminal"
+              />
             </div>
             <span className="font-mono text-sm text-muted-foreground">portfolio-terminal</span>
             <div className="flex items-center space-x-1">
-              <Button size="sm" variant="ghost" className="h-6 w-6 p-0">
+              <Button 
+                size="sm" 
+                variant="ghost" 
+                className="h-6 w-6 p-0 hover:bg-muted"
+                onClick={() => setIsOpen(false)}
+                title="Minimize"
+              >
                 <Minus className="h-3 w-3" />
               </Button>
-              <Button size="sm" variant="ghost" className="h-6 w-6 p-0">
+              <Button 
+                size="sm" 
+                variant="ghost" 
+                className="h-6 w-6 p-0 hover:bg-muted"
+                onClick={() => {
+                  setHistory([]);
+                  setInput('');
+                }}
+                title="Clear"
+              >
                 <Square className="h-3 w-3" />
               </Button>
-              <Button size="sm" variant="ghost" className="h-6 w-6 p-0" onClick={() => setIsOpen(false)}>
+              <Button 
+                size="sm" 
+                variant="ghost" 
+                className="h-6 w-6 p-0 hover:bg-muted"
+                onClick={() => setIsOpen(false)}
+                title="Close"
+              >
                 <X className="h-3 w-3" />
               </Button>
             </div>
