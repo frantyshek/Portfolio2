@@ -6,11 +6,11 @@ import { useMemo } from 'react';
 
 const Skills = () => {
   const technicalSkills = [
-    { name: 'C#', level: 75 },
-    { name: 'Unity Engine', level: 80 },
+    { name: 'C#', level: 70 },
+    { name: 'Unity Engine', level: 75 },
     { name: 'C++', level: 45 },
     { name: 'Unreal Engine', level: 50 },
-    { name: 'Game Design', level: 70 },
+    { name: 'Game Design', level: 65 },
     { name: 'Github', level: 70 },
     { name: 'Godot Engine', level: 40 }
   ];
