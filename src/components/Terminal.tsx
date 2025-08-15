@@ -10,6 +10,7 @@ const Terminal = () => {
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
+  const terminalRef = useRef<HTMLDivElement>(null);
 
   const commands = {
     help: () => `Available commands:
@@ -104,10 +105,13 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
     setHistoryIndex(-1);
     setInput('');
     
-    // Refocus input after command execution
+    // Refocus input and scroll to bottom after command execution
     setTimeout(() => {
       if (inputRef.current) {
         inputRef.current.focus();
+      }
+      if (terminalRef.current) {
+        terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
       }
     }, 0);
   };
@@ -195,7 +199,7 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
           </div>
 
           {/* Terminal Content */}
-          <div className="p-4 h-full overflow-y-auto bg-background/95 font-mono text-sm">
+          <div ref={terminalRef} className="p-4 h-full overflow-y-auto bg-background/95 font-mono text-sm">
             {/* Welcome Message */}
             {history.length === 0 && (
               <div className="text-terminal-green mb-4">
