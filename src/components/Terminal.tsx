@@ -103,6 +103,13 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
     setCommandHistory(prev => [...prev, cmd]);
     setHistoryIndex(-1);
     setInput('');
+    
+    // Refocus input after command execution
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, 0);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -152,26 +159,6 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
         <div className="terminal-window w-96 h-80 rounded-lg overflow-hidden shadow-2xl">
           {/* Terminal Header */}
           <div className="bg-muted/50 px-4 py-2 flex items-center justify-between border-b border-primary/20">
-            <div className="flex items-center space-x-2">
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer"
-                title="Close terminal"
-              />
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors cursor-pointer"
-                title="Minimize terminal"
-              />
-              <button 
-                onClick={() => {
-                  setHistory([]);
-                  setInput('');
-                }}
-                className="w-3 h-3 rounded-full bg-terminal-green hover:bg-green-600 transition-colors cursor-pointer"
-                title="Clear terminal"
-              />
-            </div>
             <span className="font-mono text-sm text-muted-foreground">portfolio-terminal</span>
             <div className="flex items-center space-x-1">
               <Button 
