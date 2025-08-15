@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { getAssetPath } from '@/lib/assets';
 import { Mail, Github, Linkedin, MapPin, Send, Loader2 } from 'lucide-react';
 
 const Contact = () => {
@@ -138,7 +139,7 @@ const Contact = () => {
             <div className="flex justify-center lg:justify-start mb-8">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-terminal-green shadow-lg shadow-terminal-green/20 overflow-hidden bg-terminal-green/10">
                 <img 
-                  src="/lovable-uploads/5e6bb33e-5bf2-4eb8-8c6b-5dc414bf864d.png" 
+                  src={getAssetPath("/lovable-uploads/5e6bb33e-5bf2-4eb8-8c6b-5dc414bf864d.png")} 
                   alt="Samuel Hamrák profile photo" 
                   className="w-full h-full object-cover"
                 />

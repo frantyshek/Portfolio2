@@ -8,6 +8,7 @@ import { ExternalLink, Calendar, Users, Gamepad2, Smartphone, Play } from 'lucid
 import ImageCarousel from './ImageCarousel';
 import VideoPlayer from './VideoPlayer';
 import MediaCarousel from './MediaCarousel';
+import { getAssetPath } from '@/lib/assets';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');

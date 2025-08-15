@@ -54,7 +54,7 @@ const Hero = () => {
   const handleDownloadCV = () => {
     // Create a temporary link element and trigger download
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; // Path to your CV file in public folder
+    link.href = import.meta.env.BASE_URL + 'cv.pdf'; // Use BASE_URL for GitHub Pages
     link.download = 'Samuel_Hamrak_CV.pdf'; // Downloaded filename
     document.body.appendChild(link);
     link.click();
