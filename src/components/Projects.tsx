@@ -308,7 +308,7 @@ The game includes:
         }
       ],
       image: getAssetPath('/lovable-uploads/a88d4d53-804e-4a47-a024-9564ec8f7347.png'),
-      tags: ['Unity', 'C#', 'Puzzle', 'Escape Room'],
+      tags: ['Unity', 'C#', 'Puzzle', '2D'],
       category: 'course',
       duration: '5 weeks',
       team: '5 developers',
@@ -360,7 +360,7 @@ Features:
         }
       ],
       image: getAssetPath('/lovable-uploads/809b1d36-7836-4b5c-9c17-13fd146f4720.png'),
-      tags: ['Unity', 'C#', 'Horror', 'Thesis'],
+      tags: ['Unreal Engine', 'C++', 'Horror', 'Thesis'],
       category: 'personal',
       duration: '4 months',
       team: '1 developer',
