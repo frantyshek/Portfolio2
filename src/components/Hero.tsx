@@ -9,8 +9,8 @@ const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const textVariants = [
     "Hello, I'm a Game Developer",
-    "I build 2D, 3D , Mobile & VR games.",
-    "Turning ideas into playable experiences."
+    "I build 2D, 3D, Mobile & VR games",
+    "Turning ideas into playable experiences"
   ];
   const currentText = textVariants[currentTextIndex];
 
