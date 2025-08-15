@@ -199,44 +199,49 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
           </div>
 
           {/* Terminal Content */}
-          <div ref={terminalRef} className="p-4 h-full overflow-y-auto bg-background/95 font-mono text-sm">
-            {/* Welcome Message */}
-            {history.length === 0 && (
-              <div className="text-terminal-green mb-4">
-                <p>Welcome to Portfolio Terminal v1.0.0</p>
-                <p>Type 'help' to see available commands.</p>
-                <p></p>
-              </div>
-            )}
-
-            {/* Command History */}
-            {history.map((entry, index) => (
-              <div key={index} className="mb-2">
-                <div className="flex items-center">
-                  <span className="text-terminal-green mr-2">$</span>
-                  <span className="text-foreground">{entry.command}</span>
+          <div className="h-full flex flex-col bg-background/95">
+            {/* Scrollable Content Area */}
+            <div ref={terminalRef} className="flex-1 p-4 overflow-y-auto font-mono text-sm">
+              {/* Welcome Message */}
+              {history.length === 0 && (
+                <div className="text-terminal-green mb-4">
+                  <p>Welcome to Portfolio Terminal v1.0.0</p>
+                  <p>Type 'help' to see available commands.</p>
+                  <p></p>
                 </div>
-                {entry.output && (
-                  <div className="text-terminal-cyan whitespace-pre-line ml-4 mb-2">
-                    {entry.output}
-                  </div>
-                )}
-              </div>
-            ))}
+              )}
 
-            {/* Current Input */}
-            <div className="flex items-center">
-              <span className="text-terminal-green mr-2">$</span>
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                className="bg-transparent border-none outline-none text-foreground font-mono flex-1"
-                placeholder="Type a command..."
-              />
-              <span className="animate-blink border-r-2 border-terminal-green ml-1"></span>
+              {/* Command History */}
+              {history.map((entry, index) => (
+                <div key={index} className="mb-2">
+                  <div className="flex items-center">
+                    <span className="text-terminal-green mr-2">$</span>
+                    <span className="text-foreground">{entry.command}</span>
+                  </div>
+                  {entry.output && (
+                    <div className="text-terminal-cyan whitespace-pre-line ml-4 mb-2">
+                      {entry.output}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Fixed Input Area */}
+            <div className="p-4 border-t border-primary/20 bg-background/95">
+              <div className="flex items-center font-mono text-sm">
+                <span className="text-terminal-green mr-2">$</span>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  className="bg-transparent border-none outline-none text-foreground font-mono flex-1"
+                  placeholder="Type a command..."
+                />
+                <span className="animate-blink border-r-2 border-terminal-green ml-1"></span>
+              </div>
             </div>
           </div>
         </div>
