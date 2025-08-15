@@ -24,7 +24,15 @@ const Terminal = () => {
   whoami    - Display current user info
   date      - Show current date and time
   ls        - List available sections
-  steam     - Open my Steam game`,
+  steam     - Open my Steam game
+  matrix    - Enter the Matrix
+  hack      - Initiate hacking sequence
+  ascii     - Display ASCII art
+  joke      - Get a programming joke
+  fortune   - Programming wisdom
+  tree      - Show project structure
+  uptime    - System uptime
+  ping      - Ping a website`,
     
     about: () => `Hi! I'm Samuel Hamrák, a passionate Game Developer specializing in Unity and game systems.
 I love creating engaging gameplay experiences and building robust game architectures.
@@ -81,7 +89,146 @@ drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 prototypes/
 drwxr-xr-x  2 dev dev 4096 Jan 15 12:00 contact/
 -rw-r--r--  1 dev dev 2048 Jan 15 12:00 CV.pdf
 -rw-r--r--  1 dev dev 1337 Jan 15 12:00 README.md
--rw-r--r--  1 dev dev  420 Jan 15 12:00 skills.txt`
+-rw-r--r--  1 dev dev  420 Jan 15 12:00 skills.txt`,
+
+    matrix: () => {
+      const lines = [
+        '01001000 01100101 01101100 01101100 01101111',
+        '01010100 01101000 01100101 01110010 01100101',
+        '11100100 10101100 11001010 01010101 01111000',
+        '01001001 01110011 00100000 01101110 01101111',
+        '01110011 01110000 01101111 01101111 01101110',
+        '',
+        'Welcome to the Matrix, Neo...',
+        'Game development is just another form of reality manipulation.',
+        'The code is the truth behind the illusion.',
+        '',
+        'Matrix Protocol: ENGAGED',
+        'Reality.exe has stopped responding...'
+      ];
+      return lines.join('\n');
+    },
+
+    hack: () => {
+      const steps = [
+        'Initializing hacking sequence...',
+        'Scanning network ports...',
+        'Port 80: OPEN',
+        'Port 443: OPEN', 
+        'Port 22: OPEN',
+        '',
+        'Attempting to bypass firewall...',
+        'Firewall bypassed successfully!',
+        '',
+        'Accessing mainframe...',
+        'Login: admin',
+        'Password: ••••••••••',
+        'Access GRANTED!',
+        '',
+        'Downloading secret files...',
+        '██████████ 100% Complete',
+        '',
+        'Just kidding! This is just a portfolio terminal 😄',
+        'But I do know how to code secure applications!'
+      ];
+      return steps.join('\n');
+    },
+
+    ascii: () => `
+   _____ _____  __  __  _    _  ______ _      
+  / ____|  __ \\|  \\/  || |  | ||  ____| |     
+ | (___ | |__) | \\  / || |  | || |__  | |     
+  \\___ \\|  _  /| |\\/| || |  | ||  __| | |     
+  ____) | | \\ \\| |  | || |__| || |____| |____ 
+ |_____/|_|  \\_\\_|  |_| \\____/ |______|______|
+                                              
+     Game Developer & Unity Enthusiast
+           Building Digital Worlds`,
+
+    joke: () => {
+      const jokes = [
+        'Why do programmers prefer dark mode? Because light attracts bugs! 🐛',
+        'Why do Java developers wear glasses? Because they cannot C# 😄',
+        'How many programmers does it take to change a light bulb? None, that\'s a hardware problem.',
+        'Why did the developer go broke? Because he used up all his cache! 💰',
+        'A SQL query goes into a bar, walks up to two tables and asks: "Can I join you?" 🍺',
+        'Why do programmers hate nature? It has too many bugs! 🌿',
+        'There are only 10 types of people: those who understand binary and those who don\'t.',
+        'Why did the programmer quit his job? He didn\'t get arrays! 📊'
+      ];
+      return jokes[Math.floor(Math.random() * jokes.length)];
+    },
+
+    fortune: () => {
+      const quotes = [
+        '"The best error message is the one that never shows up." - Thomas Fuchs',
+        '"Code is like humor. When you have to explain it, it\'s bad." - Cory House',
+        '"Programming isn\'t about what you know; it\'s about what you can figure out." - Chris Pine',
+        '"The most important property of a program is whether it accomplishes the intention of its user." - C.A.R. Hoare',
+        '"First, solve the problem. Then, write the code." - John Johnson',
+        '"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler',
+        '"Experience is the name everyone gives to their mistakes." - Oscar Wilde',
+        '"The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie'
+      ];
+      return quotes[Math.floor(Math.random() * quotes.length)];
+    },
+
+    tree: () => `
+portfolio/
+├── games/
+│   ├── LOGIN/
+│   │   ├── Steam Release ⭐
+│   │   └── puzzle-mechanics.cs
+│   ├── Romoji/
+│   │   ├── Google Play 📱
+│   │   ├── App Store 🍎
+│   │   └── word-game-engine.cs
+│   └── Capybara Game/
+│       ├── casual-adventure.unity
+│       └── character-controller.cs
+├── prototypes/
+│   ├── experimental-gameplay/
+│   ├── rapid-prototypes/
+│   └── unity-experiments/
+├── skills/
+│   ├── Unity.engine
+│   ├── CSharp.lang
+│   ├── React.framework
+│   └── TypeScript.lang
+└── contact/
+    ├── instagram -> @frantyshek
+    └── linkedin -> samuel-hamrák`,
+
+    uptime: () => {
+      const startDate = new Date('2020-01-01'); // Career start
+      const now = new Date();
+      const diffTime = Math.abs(now.getTime() - startDate.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const years = Math.floor(diffDays / 365);
+      const months = Math.floor((diffDays % 365) / 30);
+      
+      return `System Uptime: ${years} years, ${months} months
+Game Developer Mode: ACTIVE
+Current Project: Portfolio Terminal
+Status: Ready for new challenges
+Coffee Level: ████████░░ 80%
+Motivation: ██████████ 100%`;
+    },
+
+    ping: () => {
+      const sites = ['github.com', 'unity.com', 'stackoverflow.com'];
+      const site = sites[Math.floor(Math.random() * sites.length)];
+      const time = Math.floor(Math.random() * 100) + 1;
+      
+      return `PING ${site} (127.0.0.1): 56 data bytes
+64 bytes from ${site}: icmp_seq=0 ttl=64 time=${time}.${Math.floor(Math.random() * 999)}ms
+64 bytes from ${site}: icmp_seq=1 ttl=64 time=${time + 1}.${Math.floor(Math.random() * 999)}ms
+64 bytes from ${site}: icmp_seq=2 ttl=64 time=${time - 1}.${Math.floor(Math.random() * 999)}ms
+
+--- ${site} ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss
+round-trip min/avg/max/stddev = ${time-1}.000/${time}.000/${time+1}.000/0.500 ms`;
+    }
   };
 
   const executeCommand = (cmd: string) => {
